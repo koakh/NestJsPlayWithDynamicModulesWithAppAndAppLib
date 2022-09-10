@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CurrentUserPayload, AuthUser as User, UserServiceAbstract } from 'app-lib';
+import { CurrentUserPayload, AuthUser as User, UserServiceAbstract, AuthService } from 'app-lib';
 import { UserData } from './interfaces';
 import { UserInMemory } from './user.data';
 import { UserStore } from './user.store';

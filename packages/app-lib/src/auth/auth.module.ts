@@ -3,16 +3,16 @@ import { Module } from '@nestjs/common';
 import { AUTH_MODULE_OPTIONS } from './auth.constants';
 import { AuthModuleOptions } from './auth.interfaces';
 import { AuthService } from './auth.service';
-import {createNestGraphqlAuthModuleProviders} from './auth.providers';
+import {createNestAuthModuleProviders} from './auth.providers';
 
 @Module({
   providers: [
     AuthService,
-    ...createNestGraphqlAuthModuleProviders,
+    ...createNestAuthModuleProviders,
   ],
   exports: [
     AuthService,
-    ...createNestGraphqlAuthModuleProviders
+    ...createNestAuthModuleProviders
   ],
 })
 export class AuthModule extends createConfigurableDynamicRootModule<

@@ -47,6 +47,6 @@ export class AppController {
   // use app-lib > calling userService
   @Get('userservice')
   async getUserFindOneByField(): Promise<User> {
-    return await this.authService.getUserFindOneByField();
+    return this.authService.getUserFindOneByField();
   }
 }

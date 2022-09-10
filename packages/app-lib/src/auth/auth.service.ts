@@ -1,10 +1,9 @@
-import { Inject, Injectable, Logger } from "@nestjs/common";
-import { AuthStore } from "./auth.store";
-import { APP_SERVICE, AUTH_MODULE_OPTIONS, AUTH_MODULE_USER_SERVICE } from './auth.constants';
-import { AuthModuleOptions } from './auth.interfaces';
+import { Inject, Injectable } from "@nestjs/common";
 import { AppServiceAbstract, UserServiceAbstract } from "./auth.abstracts";
+import { adminCurrentUser, APP_SERVICE, AUTH_MODULE_OPTIONS, AUTH_MODULE_USER_SERVICE } from './auth.constants';
+import { AuthModuleOptions } from './auth.interfaces';
+import { AuthStore } from "./auth.store";
 import { AuthUser as User } from './types';
-import { adminCurrentUser } from './auth.constants';
 
 @Injectable()
 export class AuthService {

@@ -34,13 +34,15 @@ import { UserService } from './user/user.service';
       //     }
       //   },
       // },
-      // no need for this module already export's it
+      // no need for this export, module already export's it
       // exports: [AuthService],
     }),
   ],
-  controllers: [AppController],
+  controllers: [
+    AppController
+  ],
   providers: [
-    // another trick is that this AppService is required to else we have the mitic error
+    // another trick is that this AppService is required to else we have the classic error
     // Nest can't resolve dependencies of the AppController (?, AuthService). Please make sure that the argument AppService at index [0] is available in the AppModule context.
     AppService,
     {
